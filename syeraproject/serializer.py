@@ -14,3 +14,9 @@ class Someserializertwo(serializers.ModelSerializer):
 
         model = Customers
         fields = "__all__"
+
+class Someserializerthree(serializers.ModelSerializer):
+    class Meta :
+
+        model = Customers
+        fields = "__all__"

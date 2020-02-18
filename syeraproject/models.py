@@ -202,7 +202,7 @@ class InvoiceItems(models.Model):
 
 class Invoices(models.Model):
     invoiceid = models.AutoField(db_column='InvoiceId', primary_key=True)  # Field name made lowercase.
-    customerid = models.IntegerField(db_column='CustomerId')  # Field name made lowercase.
+    customerid = models.ForeignKey(Customers,db_column='CustomerId',on_delete=models.CASCADE)  # Field name made lowercase.
     invoicedate = models.DateTimeField(db_column='InvoiceDate')  # Field name made lowercase.
     billingaddress = models.TextField(db_column='BillingAddress', blank=True, null=True)  # Field name made lowercase. This field type is a guess.
     billingcity = models.TextField(db_column='BillingCity', blank=True, null=True)  # Field name made lowercase. This field type is a guess.
