@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from syeraproject.views import SendFirstResponse
+from syeraproject.views import SendFirstResponse, UpdateCustomerDetails
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('getArtist/', SendFirstResponse.as_view()),
+    path('updatecustomerDetails/',UpdateCustomerDetails.as_view())
 ]
